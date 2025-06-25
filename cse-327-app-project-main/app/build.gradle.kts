@@ -114,4 +114,5 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
+    // Local stub classes provide minimal TensorFlow Lite APIs for offline builds
 }
