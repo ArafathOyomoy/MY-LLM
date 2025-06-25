@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.*
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var invokeM1Button: Button
     private lateinit var invokeM2Button: Button
     private lateinit var resultView: TextView
+    private lateinit var m1Model: M1Model
 
     private lateinit var googleSignInClient: GoogleSignInClient
 
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         invokeM1Button = findViewById(R.id.invoke_m1_button)
         invokeM2Button = findViewById(R.id.invoke_m2_button)
         resultView = findViewById(R.id.result_view)
+        m1Model = M1Model(this)
 
         requestPermissions()
         configureGoogleSignIn()
@@ -83,7 +86,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun runM1Model(input: String): String {
-        return "[M1] Processed input: $input\n(Integrate M1 model here)"
+        return m1Model.generateResponse(input)
     }
 
     private fun runM2Model(input: String): String {
@@ -107,4 +110,3 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
-//final git test
