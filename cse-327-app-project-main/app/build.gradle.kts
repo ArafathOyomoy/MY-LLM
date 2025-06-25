@@ -114,6 +114,6 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
-    // TensorFlow Lite runtime for the M1 example model
+
     implementation("org.tensorflow:tensorflow-lite:2.16.0")
 }
