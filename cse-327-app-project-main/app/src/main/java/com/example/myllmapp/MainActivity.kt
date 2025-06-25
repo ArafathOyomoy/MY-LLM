@@ -1,5 +1,3 @@
-//package com.example.myllmapp
-
 package com.example.myllmapp
 
 import android.Manifest
